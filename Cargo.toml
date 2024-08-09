@@ -1,0 +1,14 @@
+[package]
+edition = "2021"
+name = "portfolio"
+version = "0.1.0"
+
+[dependencies]
+web-sys = "0.3.69"
+console_error_panic_hook = {version = "0.1"}
+gloo-net = {version = "0.6", features = ["http"]}
+leptos = {version = "0.6", features = ["csr"]}
+leptos_meta = "0.6"
+leptos_router = "0.6"
+console_log = "1.0.0"
+log = "0.4.22"
