@@ -11,13 +11,11 @@
             "id": "27d5860580f7df8c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CV.md",
-                "mode": "source",
-                "source": false
+                "file": "CV.pdf"
               },
-              "icon": "lucide-file",
+              "icon": "lucide-file-text",
               "title": "CV"
             }
           }
@@ -77,7 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CV.md",
+                "file": "CV.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,6 +163,7 @@
   },
   "active": "27d5860580f7df8c",
   "lastOpenFiles": [
-    "CV.md"
+    "CV.md",
+    "CV.pdf"
   ]
 }
