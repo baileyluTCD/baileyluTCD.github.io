@@ -1,4 +1,5 @@
 {
-  "theme": "obsidian",
-  "cssTheme": "Catppuccin"
+  "theme": "moonstone",
+  "cssTheme": "AnuPpuccin",
+  "interfaceFontFamily": "Arial"
 }

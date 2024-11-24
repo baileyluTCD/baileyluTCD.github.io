@@ -1,6 +1,6 @@
 # CV - Luke Bailey
 ---
-##  About Me
+## About Me
 As an **originally self-taught programmer** with a passion for **problem-solving**, I have honed my skills through **hands-on experience** and a **deep curiosity** for technology. I have built many projects, both small and large in scale to this end as I believe it is best to learn **practically**. I have continued my acquisition of technical knowledge by going to college to pursue **integrated computer science**.
 
 My **dedication** and **persistence** have allowed me to thrive in a self-directed learning environment and have equipped me with a **solid foundation** in programming principles and **best practices**. I am eager to continue expanding my knowledge and contributing my skills to **innovative** projects, and has set a path for me to work well in other related areas.
