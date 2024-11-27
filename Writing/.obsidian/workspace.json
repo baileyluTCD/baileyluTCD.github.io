@@ -4,18 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "41f179a40b98968f",
+        "id": "f417478ad706dd4a",
         "type": "tabs",
         "children": [
           {
-            "id": "27d5860580f7df8c",
+            "id": "b9e3f3240ded1184",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "CV.pdf"
+                "file": "CV.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
+              "icon": "lucide-file",
               "title": "CV"
             }
           }
@@ -157,13 +159,12 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "webpage-html-export:Export Vault to HTML": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "27d5860580f7df8c",
+  "active": "b9e3f3240ded1184",
   "lastOpenFiles": [
-    "CV.md",
-    "CV.pdf"
+    "CV.pdf",
+    "CV.md"
   ]
 }

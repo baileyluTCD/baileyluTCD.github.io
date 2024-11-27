@@ -6,5 +6,8 @@
   "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-teal",
   "anuppuccin-theme-settings@@anp-print": true,
   "anuppuccin-theme-settings@@anp-header-color-toggle": true,
-  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-sky"
+  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-sky",
+  "primary-theme@@zero-tab-anim": false,
+  "primary-theme@@zero-popup-popdown": false,
+  "primary-theme@@zero-popup-blur": false
 }
