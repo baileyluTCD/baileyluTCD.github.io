@@ -20,7 +20,7 @@ Here is a collection of posts from my blog which I hope you'll enjoy:
 ---
 ### Notes
 I attempt to write all my notes with [Obsidian](https://obsidian.md/) and host them online publicly, here is an index of currently available notes sites in this format:
-- [Discrete Mathematics]([https://baileylutcd.github.io/mau22c00-discrete-mathematics/](https://baileylutcd.github.io/mau22c00-discrete-mathematics/))
+- [Discrete Mathematics](https://baileylutcd.github.io/mau22c00-discrete-mathematics/)
 - [Applied Probability 1](https://github.com/baileyluTCD/stu2004-applied-probability-1)
 - [Applied Probability 2](https://baileylutcd.github.io/stu22005-applied-probability-2/)
 - [Algorithms and Data Structures 1](https://github.com/baileyluTCD/csu22011-algorithms-and-data-structures-1)
