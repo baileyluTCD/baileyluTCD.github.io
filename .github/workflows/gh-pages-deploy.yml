@@ -31,7 +31,7 @@ jobs:
       # Move your obsidian files into Quartz
       - name: Move Vault to Quartz
         run: |
-          cp -r ./Writing /tmp/quartz/content/
+          cp -r ./Writing/* /tmp/quartz/content/
           mkdir -p /tmp/quartz/static
 
       # Install Node.js and dependencies
