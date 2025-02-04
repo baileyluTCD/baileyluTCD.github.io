@@ -2,58 +2,29 @@
 
 ![[Headshot.jpg]]
 
----
-## About Me
-As an **originally self-taught programmer** with a passion for **problem-solving**, I have honed my skills through **hands-on experience** and a **deep curiosity** for technology. I have built many projects, both small and large in scale to this end as I believe it is best to learn **practically**. I have continued my acquisition of technical knowledge by going to college to pursue **integrated computer science**.
+Hi, I'm Luke, an experienced web developer currently in college in [Trinity College Dublin](https://www.tcd.ie/). 
 
-My **dedication** and **persistence** have allowed me to thrive in a self-directed learning environment and have equipped me with a **solid foundation** in programming principles and **best practices**. I am eager to continue expanding my knowledge and contributing my skills to **innovative** projects, and has set a path for me to work well in other related areas.
+Want to know more? See my [[About Me|about me page]] or **choose one of the links below**.
 
 ---
-## Key Skills
-- Web Design
-- Computer Literacy
-- General Computer Programming
-- Time Management
-- Problem Solving
-- Strong Communication
-- Decision Making
-- Data Analysis
+### Open Source
+Here is a list of open source projects I currently manage:
+- [My NixOS System Configuration](https://github.com/baileyluTCD/nixos-configuration)
+- [Serde duplicate key deserialization library](https://github.com/baileyluTCD/serde-deserialize-duplicates)
 
 ---
-## Previous Experience
-### Full Stack Web Developer - Bar Monkey Calisthenics
-_March 2024 - August 2024_
-
-As I had previous experience with Bar Monkey building a stylised front-end in the past, I was contacted and asked if I could work on a new piece of sports tracking and attendance management software for usage in the club. I build this with react, express.js and MongoDB as they represent an industry standard for this class of work and are a common choice making support and maintainer availability high. I was also tasked with finding and managing server hosting which I selected fly.io for due to a simple and easily scalable workflow.
-### Software Engineer - Irish Calisthenics Institution
-_Jan 2024 - March 2024_
-
-In my time working with the Irish Calisthenics Institution, I greatly furthered my understanding of web development by building a full front-end website and back-end server written in the Rust programming language, based on the Yew and Rocket frameworks. I integrated MongoDB with my server for fast, efficient data storage.
-### AIB Summer Student Role
-_July 2023 - August 2023_
-
-In my time at AIB, I learned much about the inner workings of a bank and gained exposure to tools heavily relied in the finance sector such as Microsoft Excel. Working here also helped me understand more of what is expected of an employee in a corporate environment and how to communicate professionally with coworkers
-### Front-end Website Developer - Bar Monkey 
-_June 2022 - August 2022_
-As a website developer for Bar Monkey Sports Club, I was responsible for designing a new website front-end written with HTML, CSS and vanilla JavaScript to expose more details about upcoming events and activities as well as a customer focused user experience to allow them to view their data.
-### Work Experience - IBEC
-_April 2021_
-During my transition year, I had the opportunity to work at IBEC, the largest business representative organisation in Ireland. The experience at IBEC was highly valuable to me as it allowed me a glimpse into a professional corporate environment and improved my communication skills.
+### Blog Highlights
+Here is a collection of posts from my blog which I hope you'll enjoy:
+- [[How and Why we wrote a full stack web app in Rust]]
 
 ---
-## Education
-
-| Education Level        | Completion Status                              |
-| ---------------------- | ---------------------------------------------- |
-| Clonkeen College       | Completed leaving cert in 2023 with 601 points |
-| Trinity College Dublin | Second Year Integrated Computer Science        |
-
----
-## Contact Me
-
-| Contact Type           | Information                                  |
-| ---------------------- | -------------------------------------------- |
-| Phone Number           | 085 827 9341                                 |
-| College Email Address  | baileylu@tcd.ie                              |
-| Personal Email Address | lukejoebailey123@gmail.com                   |
-| Home Address           | Eden, Commons Road, Loughlinstown, Dublin 18 |
+### Notes
+I attempt to write all my notes with [Obsidian](https://obsidian.md/) and host them online publicly, here is an index of currently available notes sites in this format:
+- [Discrete Mathematics]([https://baileylutcd.github.io/mau22c00-discrete-mathematics/](https://baileylutcd.github.io/mau22c00-discrete-mathematics/))
+- [Applied Probability 1](https://github.com/baileyluTCD/stu2004-applied-probability-1)
+- [Applied Probability 2](https://baileylutcd.github.io/stu22005-applied-probability-2/)
+- [Algorithms and Data Structures 1](https://github.com/baileyluTCD/csu22011-algorithms-and-data-structures-1)
+- [Algorithms and Data Structures 2](https://github.com/baileyluTCD/csu22012-algorithms-and-data-structures-2)
+- [Microprocessor Systems](https://baileylutcd.github.io/csu23021-microprocessor-systems/)
+- [Concurrent Systems and Operating Systems](https://github.com/baileyluTCD/csu23016-concurrent-systems-and-operating-systems)
+- [Information Management 1](https://github.com/baileyluTCD/CSU22041---Information-Management-1-)
