@@ -9,7 +9,7 @@ Want to know more? See my [[About Me|about me page]] or **choose one of the link
 ---
 ### Open Source
 Here is a list of open source projects I currently manage:
-- [My NixOS System Configuration](https://github.com/baileyluTCD/nixos-configuration)
+- [My NixOS System Configuration](https://baileylutcd.github.io/nixos-configuration/)
 - [Serde duplicate key deserialization library](https://github.com/baileyluTCD/serde-deserialize-duplicates)
 
 ---
