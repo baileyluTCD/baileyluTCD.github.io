@@ -1,53 +1,41 @@
-As an **originally self-taught programmer** with a passion for **problem-solving**, I have honed my skills through **hands-on experience** and a **deep curiosity** for technology. I have built many projects, both small and large in scale to this end as I believe it is best to learn **practically**. I have continued my acquisition of technical knowledge by going to college to pursue **integrated computer science**.
 
-My **dedication** and **persistence** have allowed me to thrive in a self-directed learning environment and have equipped me with a **solid foundation** in programming principles and **best practices**. I am eager to continue expanding my knowledge and contributing my skills to **innovative** projects, and has set a path for me to work well in other related areas.
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: -28px;">
+	<h1 style="font-size: 2.2em;">Luke Bailey</h1>
+	<p style="text-align: center;">
+		<a href="mailto:baileylu@tcd.ie">baileylu@tcd.ie</a> |
+		<a href="https://baileylutcd.github.io">Blog</a> |
+		<a href="https://github.com/baileyluTCD">Github</a> |
+		<a href="https://www.linkedin.com/in/luke-bailey-76aa62344/ ">LinkedIn</a> |
+		 Dublin, Ireland
+	</p>
+</div>
 
+# Projects
 ---
-## Key Skills
-- Web Design
-- Computer Literacy
-- General Computer Programming
-- Time Management
-- Problem Solving
-- Strong Communication
-- Decision Making
-- Data Analysis
-
+## Custom [Nix](https://nixos.wiki/)-Based Linux Distribution
+I have **developed** and **daily driven** a custom [Nix-based Linux distribution](https://github.com/baileyluTCD/nixos-configuration), tailored for **personal productivity** and system requirements. This involved configuring a **reproducible** and **declarative** environment using Nix, optimising **package management**, and fine-tuning system services for **stability** and **performance**. I automated system provisioning with custom **Nix derivations**, ensuring **seamless updates**, **rollback capabilities** and atomicity of **program configurations**. Through this project, I gained deep expertise in **functional package management**, system **configuration**, and **Linux internals**, enhancing my ability to build and maintain **reliable, scalable** computing environments.
+## Web-App written in pure [Rust](https://www.rust-lang.org/)
+As part of a three-person team, I developed a **high-performance web application** for an online store using pure **Rust** with the [Leptos](https://www.leptos.dev/) framework. My contributions included building **reactive UI** components, integrating a **robust backend** with [Actix](https://actix.rs/) for efficient data handling, and management of the **build and deployment system** through **Nix**. By leveraging Rust’s **memory safety** and **concurrency features**, we ensured a highly responsive and secure shopping experience. The project emphasized **clean architecture**, **minimal runtime overhead**, and a fully **type-safe** codebase, resulting in a **fast and scalable** e-commerce platform. This experience deepened my expertise in **full-stack Rust development** and **modern web technologies**.
+# Work Experience
 ---
-## Previous Experience
-### Full Stack Web Developer - Bar Monkey Calisthenics
-_March 2024 - August 2024_
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: -28px;">
+	<h2>MERN Full Stack Web Developer</h2>
+	<p><i>Bar Monkey Calisthenics: Jan 24 > July 24</i></p>
+</div>
 
-As I had previous experience with Bar Monkey building a stylised front-end in the past, I was contacted and asked if I could work on a new piece of sports tracking and attendance management software for usage in the club. I build this with react, express.js and MongoDB as they represent an industry standard for this class of work and are a common choice making support and maintainer availability high. I was also tasked with finding and managing server hosting which I selected fly.io for due to a simple and easily scalable workflow.
-### Software Engineer - Irish Calisthenics Institution
-_Jan 2024 - March 2024_
+For **six months**, I worked as a **solo full-stack web developer** at **Bar Monkey**, where I designed, developed, and deployed a web application using the **[MERN](https://www.geeksforgeeks.org/mern-stack/) (MongoDB, Express, React, Node.js)** stack. I built a **dynamic and responsive** frontend with React while implementing a robust backend with **Express and MongoDB**, ensuring seamless data flow and API performance. Deployment was handled via [Docker](https://www.docker.com/), containerising the application for **scalability** and **reliability** on fly.io. Throughout the project, I managed the **full development life-cycle**, from **planning** and **coding** to **deployment** and **maintenance**, gaining valuable experience in **end-to-end web development** and **cloud-based infrastructure**.
 
-In my time working with the Irish Calisthenics Institution, I greatly furthered my understanding of web development by building a full front-end website and back-end server written in the Rust programming language, based on the Yew and Rocket frameworks. I integrated MongoDB with my server for fast, efficient data storage.
-### AIB Summer Student Role
-_July 2023 - August 2023_
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: -28px;">
+	<h2>Data Management Intern</h2>
+	<p><i>AIB: June 23 > August 23</i></p>
+</div>
 
-In my time at AIB, I learned much about the inner workings of a bank and gained exposure to tools heavily relied in the finance sector such as Microsoft Excel. Working here also helped me understand more of what is expected of an employee in a corporate environment and how to communicate professionally with coworkers
-### Front-end Website Developer - Bar Monkey 
-_June 2022 - August 2022_
-As a website developer for Bar Monkey Sports Club, I was responsible for designing a new website front-end written with HTML, CSS and vanilla JavaScript to expose more details about upcoming events and activities as well as a customer focused user experience to allow them to view their data.
-### Work Experience - IBEC
-_April 2021_
-During my transition year, I had the opportunity to work at IBEC, the largest business representative organisation in Ireland. The experience at IBEC was highly valuable to me as it allowed me a glimpse into a professional corporate environment and improved my communication skills.
+During my **summer internship** at AIB, I worked on modernising **data management processes** for the lending division. My primary responsibility was converting a **large volume** of **historical paper records** into structured digital formats, such as **Excel spreadsheets** and **database-ready files**. This involved meticulous **data entry**, **validation**, and organisation to ensure accuracy and consistency. Additionally, I helped **streamline data workflows**, making retrieval and analysis more efficient for the team. Through this experience, I developed strong skills in **data handling**, **digitization strategies**, and **process optimization** within a financial services context.
 
+# Education
 ---
-## Education
+<table style="margin: auto;"> <thead> <tr> <th>Institution</th> <th>Goal</th> <th>Dates Attended</th> <th>Outcome</th> </tr> </thead> <tbody> <tr> <td>Trinity College Dublin</td> <td>B.A. Computer Science</td> <td>Sep 23 &gt; May 27</td> <td>81% Grade Average</td> </tr> <tr> <td>Clonkeen College</td> <td>Leaving Cert</td> <td>Sept 18 &gt; June 23</td> <td>601 Points</td> </tr> </tbody> </table>
 
-| Education Level        | Completion Status                              |
-| ---------------------- | ---------------------------------------------- |
-| Clonkeen College       | Completed leaving cert in 2023 with 601 points |
-| Trinity College Dublin | Second Year Integrated Computer Science        |
-
+# Skills
 ---
-## Contact Me
-
-| Contact Type           | Information                                  |
-| ---------------------- | -------------------------------------------- |
-| Phone Number           | 085 827 9341                                 |
-| College Email Address  | baileylu@tcd.ie                              |
-| Personal Email Address | lukejoebailey123@gmail.com                   |
-| Home Address           | Eden, Commons Road, Loughlinstown, Dublin 18 |
+Rust, DevOps, Nix, SQL, Web, React, JavaScript, TypeScript, MongoDB, Express, Node.js, Docker, Clean Code, Type Safety
