@@ -9,5 +9,9 @@
   "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-sky",
   "primary-theme@@zero-tab-anim": false,
   "primary-theme@@zero-popup-popdown": false,
-  "primary-theme@@zero-popup-blur": false
+  "primary-theme@@zero-popup-blur": false,
+  "minimal-style@@heading-spacing": "1em",
+  "minimal-style@@p-spacing": "1rem",
+  "minimal-style@@h1-size": "1.25em",
+  "minimal-style@@h2-size": "1.125em"
 }

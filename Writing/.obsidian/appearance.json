@@ -1,5 +1,8 @@
 {
   "theme": "moonstone",
   "cssTheme": "Minimal",
-  "interfaceFontFamily": "Arial"
+  "interfaceFontFamily": "Arial",
+  "enabledCssSnippets": [
+    "shrink-line-spacing"
+  ]
 }

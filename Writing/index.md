@@ -4,7 +4,7 @@
 
 Hi, I'm Luke, an experienced web developer currently in college in [Trinity College Dublin](https://www.tcd.ie/). 
 
-Want to know more? See my [[About Me|about me page]] or **choose one of the links below**.
+Want to know more? See my [[CV|about me page]] or **choose one of the links below**.
 
 ---
 ### Open Source

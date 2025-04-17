@@ -11,12 +11,14 @@
             "id": "48ceda362382dcfb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Luke_Bailey_Web_Infrastructure.pdf"
+                "file": "CV.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Luke_Bailey_Web_Infrastructure"
+              "icon": "lucide-file",
+              "title": "CV"
             }
           }
         ]
@@ -76,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 660.5026054382324
+    "width": 373.5026054382324
   },
   "right": {
     "id": "a7153357375021f5",
@@ -163,11 +165,12 @@
   },
   "active": "48ceda362382dcfb",
   "lastOpenFiles": [
-    "About Me.md",
+    "CV.pdf",
     "index.md",
-    "Luke_Bailey_Web_Infrastructure.pdf",
-    "Luke_Bailey_Web_Infrastructure.pdf.pdf",
     "Headshot.jpg",
+    "Luke_Bailey_Web_Infrastructure.pdf",
+    "CV.md",
+    "Luke_Bailey_Web_Infrastructure.pdf.pdf",
     "Blog/Leptos/How and Why we wrote a full stack web app in Rust.md",
     "Blog/Leptos/Devenv Image.png",
     "Blog/Leptos",
