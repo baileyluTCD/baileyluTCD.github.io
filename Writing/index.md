@@ -1,6 +1,6 @@
-# Luke Bailey
+<img src="./Headshot.jpg" style="width: 150px; height:150px;"/>
 
-![[Headshot.jpg]]
+# Luke Bailey
 
 Hi, I'm Luke, an experienced web developer currently in college in [Trinity College Dublin](https://www.tcd.ie/). 
 
@@ -9,6 +9,8 @@ Want to know more? See my [[CV|about me page]] or **choose one of the links belo
 ---
 ### Open Source
 Here is a list of open source projects I currently manage:
+- [Bun2nix](https://github.com/baileyluTCD/bun2nix)
+- [rp2040nix](https://github.com/baileyluTCD/rp2040nix)
 - [My NixOS System Configuration](https://baileylutcd.github.io/nixos-configuration/)
 - [Serde duplicate key deserialization library](https://github.com/baileyluTCD/serde-deserialize-duplicates)
 

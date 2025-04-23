@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CV.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CV"
+              "title": "index"
             }
           }
         ]
@@ -165,11 +165,11 @@
   },
   "active": "48ceda362382dcfb",
   "lastOpenFiles": [
-    "CV.pdf",
-    "index.md",
-    "Headshot.jpg",
     "Luke_Bailey_Web_Infrastructure.pdf",
     "CV.md",
+    "index.md",
+    "CV.pdf",
+    "Headshot.jpg",
     "Luke_Bailey_Web_Infrastructure.pdf.pdf",
     "Blog/Leptos/How and Why we wrote a full stack web app in Rust.md",
     "Blog/Leptos/Devenv Image.png",
