@@ -5,8 +5,13 @@
 .layout = "note.shtml",
 .draft = false,
 .custom = {
-    "link": "https://google.com",
+    "link": "https://baileylutcd.github.io/CSU22041---Information-Management-1-/",
 }
 --- 
 
-Information management blah blah blah
+This module was a simple module covering how data was represented and shared.
+
+Topics covered included:
+- UML modelling for object-oriented programming
+- The XML language and XQuery
+- The Semantic Web
