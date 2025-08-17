@@ -1,0 +1,12 @@
+---
+.title = "Microprocessor Systems",
+.date = @date("2025-04-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu23021-microprocessor-systems/",
+}
+--- 
+
+This module covers a wide range of topics for creating programs for the RP2040 in C.

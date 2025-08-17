@@ -1,0 +1,17 @@
+---
+.title = "Algorithms and Data Structures 1",
+.date = @date("2024-12-09T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu22011-algorithms-and-data-structures-1/",
+}
+--- 
+
+Algorithms and Data Structures 1 covers the basics of:
+- What an algoritm is
+- What a data structure is
+- Trees, Queues, Lists
+- Time and Space Complexity
+

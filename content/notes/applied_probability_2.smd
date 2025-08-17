@@ -1,0 +1,15 @@
+---
+.title = "Applied Probability 2",
+.date = @date("2025-04-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/stu22005-applied-probability-2/",
+}
+--- 
+
+Applied Probability 2 expands on [Applied Probability 1]($link.sibling('applied_probability_1')) to include further topics like:
+- Regressions
+- Trials
+- Deeper looks into Distributions and Hypothesis Testing
