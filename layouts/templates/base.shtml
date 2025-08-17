@@ -20,9 +20,7 @@
         <a href="$site.page('').link()">Home</a>
         <a href="$site.page('about').link()">About</a>
         <a href="$site.page('blog').link()">Blog</a>
-        <ctx :if="$site.page('devlog').subpages().first?()">
-          <a href="$if.link()">Devlog</a>
-        </ctx>
+        <a href="$site.page('notes').link()">Notes</a>
       </nav>
     </header>
     <super>
