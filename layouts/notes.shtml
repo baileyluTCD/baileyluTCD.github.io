@@ -24,6 +24,29 @@
       overflow: hidden;
       white-space: nowrap;
     }
+
+    .line-break {
+      background-color: var(--theme-text-color);
+      height: 1px;
+      width: 100%;
+      opacity: 0.2;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    @media only screen and (max-width: 820px) {
+      .preview p{
+        max-width: 50ch;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .preview p{
+        max-width: 25ch;
+      }
+    }
   </style>
 </head>
 <body id="body">
@@ -37,6 +60,7 @@
       </a>
       <span class="date" :text="$loop.it.date.format('2006')"></span>
       <div class="preview" :html="$loop.it.content()"></div>
+      <div class="line-break"></div>
     </div>
   </div>
 </body>
