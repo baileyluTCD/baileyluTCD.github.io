@@ -11,4 +11,6 @@
 .draft = false,
 --- 
 
-This page is an index of my notes created during my attendance of [Trinity's Integrated Computer Science](https://www.tcd.ie/courses/undergraduate/courses/computer-science/) course. Many of these contain searchable bodies of work which may be useful as a reference for past and current students, but may or may not be up to date depending on creation date.
+This page is an index of my notes created during my attendance of [Trinity's Integrated Computer Science](https://www.tcd.ie/courses/undergraduate/courses/computer-science/) course. Many of these contain searchable bodies of work which may be useful as a reference for past and current students, but may or may not be up-to-date depending on creation date.
+
+There is also an [RSS feed]($link.alternative('rss')) available for convenience.

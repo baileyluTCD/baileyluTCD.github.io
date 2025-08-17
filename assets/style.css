@@ -91,3 +91,9 @@ footer {
 footer hr {
   width: 100%;
 }
+
+img {
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
