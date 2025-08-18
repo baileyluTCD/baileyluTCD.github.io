@@ -13,7 +13,23 @@
     <!-- /mathtex -->
     <super>
   </head>
+
+
   <body id="body">
+    <div class="wave-wrapper wave-animation">
+      <ctx bg_template='$page.custom.getOr("bg-img-template", "background-image: url({})")'>  
+        <div class="wave-wrapper-inner wave-bg-top">
+          <div class="wave wave-top" style="$ctx.bg_template.fmt($site.asset('wave-top.png').link())"></div>
+        </div>
+        <div class="wave-wrapper-inner wave-bg-middle">
+          <div class="wave wave-middle" style="$ctx.bg_template.fmt($site.asset('wave-mid.png').link())"></div>
+        </div>
+        <div class="wave-wrapper-inner wave-bg-bottom">
+          <div class="wave wave-bottom" style="$ctx.bg_template.fmt($site.asset('wave-bot.png').link())"></div>
+        </div>
+      </ctx>
+    </div>
+
     <header>
     <h1 class="site-title" :text="$site.title"></h1>
       <nav>
@@ -24,10 +40,5 @@
       </nav>
     </header>
     <super>
-    <footer>
-      <hr>
-      <h5>SITE UNDER CONSTRUCTION</h5>
-      <img src="$site.asset('under-construction.gif').link()" width=90>
-    </footer>
   </body>
 </html>
