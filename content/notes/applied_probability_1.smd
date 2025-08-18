@@ -1,0 +1,12 @@
+---
+.title = "Applied Probability 1",
+.date = @date("2024-12-09T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/stu2004-applied-probability-1/",
+}
+--- 
+
+This course covers the basics of probability including topics such as distributions, hypothesis testing and random sampling.

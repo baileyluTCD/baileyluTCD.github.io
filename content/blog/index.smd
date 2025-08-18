@@ -1,0 +1,16 @@
+---
+.title = "Blog",
+.date = @date("2024-01-01T00:00:00"),
+.author = "Luke Bailey",
+.layout = "blog.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "blog.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+
+This is my personal blog where I (very occasionally) may write posts you might enjoy.
+
+The blog section also has an [RSS feed]($link.alternative('rss')).

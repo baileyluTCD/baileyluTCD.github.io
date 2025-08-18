@@ -1,0 +1,66 @@
+<extend template="base.shtml">
+<head id="head">
+  <style>
+    .date {
+      font-size: 0.9em;
+    }
+    
+    .title h3{
+      margin-bottom: 0;
+    }
+
+    .preview{
+      margin-left: 20px;
+      font-style: italic;
+    }
+
+    .preview *{
+      display:none;
+    }
+
+    .preview p:first-child{
+      display: block;
+      text-overflow: ellipsis; 
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .line-break {
+      background-color: var(--theme-text-color);
+      height: 1px;
+      width: 100%;
+      opacity: 0.2;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    @media only screen and (max-width: 820px) {
+      .preview p{
+        max-width: 50ch;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .preview p{
+        max-width: 25ch;
+      }
+    }
+  </style>
+</head>
+<body id="body">
+  <h1 :text="$page.title"></h1>
+  <div :html="$page.content()"></div>
+  <div>
+    <h2>Notes</h2>
+    <div :loop="$page.subpages()">
+      <a class="title" href="$loop.it.link()">
+        <h3 :text="$loop.it.title"></h3>
+      </a>
+      <span class="date" :text="$loop.it.date.format('2006')"></span>
+      <div class="preview" :html="$loop.it.content()"></div>
+      <div class="line-break"></div>
+    </div>
+  </div>
+</body>

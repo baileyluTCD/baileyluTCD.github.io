@@ -1,0 +1,32 @@
+---
+.title = "Homepage",
+.date = @date("2025-08-17T11:20:00"),
+.author = "Luke Bailey",
+.layout = "index.shtml",
+.draft = false,
+--- 
+
+## Hi there! 👋
+
+I'm Luke Bailey, a software developer based in Dublin, Ireland. Passionate about open-source contributions and building efficient systems!
+
+## About Me
+
+Currently pursuing a degree in Computer Science at Trinity College Dublin, I enjoy working with various programming languages and technologies, particularly in the realm of functional programming or systems programming.
+
+## Projects
+
+Please take a look at my projects over on [GitHub](https://github.com/baileyluTCD).
+
+## Notes
+
+Looking for computer science notes? Please have a look at [the index of my notes](/notes).
+
+## Latest Blog Posts
+
+Check out my blog [here](/blog).
+
+## Connect with Me
+
+Have a look at [my cv](/cv) for up to date contact information.
+

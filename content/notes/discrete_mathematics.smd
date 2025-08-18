@@ -1,0 +1,20 @@
+---
+.title = "Discrete Mathematics",
+.date = @date("2025-04-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/mau22c00-discrete-mathematics/",
+}
+--- 
+
+This year long module provides a deep glimpse into discrete mathematics, covering material such as:
+- Abstract Algebra
+- Countability of Sets
+- Formal Lanugages
+- Functions
+- Graph Theory
+- Set Theory
+- Turing Machines
+

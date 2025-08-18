@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title :text="$site.title"></title>
+    <link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('highlight.css').link()">
+    <!-- mathtex -->
+    <link type="text/css" rel="stylesheet" href="$site.asset('Temml-Local.css').link()">
+    <script defer src="$site.asset('temml.min.js').link()"></script>
+    <script defer src="$site.asset('render-mathtex.js').link()"></script>
+    <!-- /mathtex -->
+    <super>
+  </head>
+
+
+  <body id="body">
+    <div class="wave-wrapper wave-animation">
+      <ctx bg_template='$page.custom.getOr("bg-img-template", "background-image: url({})")'>  
+        <div class="wave-wrapper-inner wave-bg-top">
+          <div class="wave wave-top" style="$ctx.bg_template.fmt($site.asset('wave-top.png').link())"></div>
+        </div>
+        <div class="wave-wrapper-inner wave-bg-middle">
+          <div class="wave wave-middle" style="$ctx.bg_template.fmt($site.asset('wave-mid.png').link())"></div>
+        </div>
+        <div class="wave-wrapper-inner wave-bg-bottom">
+          <div class="wave wave-bottom" style="$ctx.bg_template.fmt($site.asset('wave-bot.png').link())"></div>
+        </div>
+      </ctx>
+    </div>
+
+    <header>
+    <h1 class="site-title" :text="$site.title"></h1>
+      <nav>
+        <a href="$site.page('').link()">Home</a>
+        <a href="$site.page('cv').link()">CV</a>
+        <a href="$site.page('blog').link()">Blog</a>
+        <a href="$site.page('notes').link()">Notes</a>
+      </nav>
+    </header>
+    <super>
+  </body>
+</html>

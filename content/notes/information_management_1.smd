@@ -1,0 +1,17 @@
+---
+.title = "Information Management 1",
+.date = @date("2024-12-09T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/CSU22041---Information-Management-1-/",
+}
+--- 
+
+This module was a simple module covering how data was represented and shared.
+
+Topics covered included:
+- UML modelling for object-oriented programming
+- The XML language and XQuery
+- The Semantic Web

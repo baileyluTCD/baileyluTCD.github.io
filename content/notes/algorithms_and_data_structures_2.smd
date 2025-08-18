@@ -1,0 +1,16 @@
+---
+.title = "Algorithms and Data Structures 2",
+.date = @date("2025-04-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu22012-algorithms-and-data-structures-2",
+}
+--- 
+
+Algorithms and Data Structures 2 expands on [Algorithms and Data Structures 1]($link.sibling('algorithms_and_data_structures_1')) to include further topics like:
+- Sorting Algorithms
+- Flow Networks
+- Graphs
+- String Search
