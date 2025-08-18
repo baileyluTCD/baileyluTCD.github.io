@@ -1,5 +1,7 @@
 :root {
   --theme-bg-color: #1d2021;
+  --theme-alt-bg-color: #282828;
+  --theme-alt-bg-2-color: #504945;
   --theme-text-color: #ebdbb2;
   --theme-title-color: #fbf1c7;
   --theme-hyperlink-color: #83a598;
@@ -96,4 +98,16 @@ img {
   height: auto;
   max-width: 100%;
   max-height: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+tr:first-child {
+  background-color: var(--theme-alt-bg-2-color);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--theme-alt-bg-color);
 }
