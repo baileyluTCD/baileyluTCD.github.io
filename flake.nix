@@ -22,7 +22,7 @@
     };
 
     zine = {
-      url = "github:nihklas/zine?rev=main";
+      url = "github:nihklas/zine?ref=main";
       inputs.zig2nix.follows = "zig2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
