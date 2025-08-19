@@ -20,14 +20,17 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Build Docs
+      - name: Use Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Build CV
         run: nix build .#cv --accept-flake-config
 
       - name: Upload CV artifact
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "cv"
+          automatic_release_tag: "latest"
           title: "CV Build"
           files: |
             ./result
