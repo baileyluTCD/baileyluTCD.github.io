@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -20,14 +20,16 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Build Docs
-        run: nix build .#cv --accept-flake-config
+      - name: Use Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
 
-      - name: Upload CV artifact
-        uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Build CV
+        run: |
+          nix build .#cv --accept-flake-config
+          cp result cv.pdf
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "cv"
-          title: "CV Build"
-          files: |
-            ./result
+          tag_name: 'v${{ github.run_number }}'
+          files: cv.pdf
