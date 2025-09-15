@@ -1,0 +1,17 @@
+---
+.title = "Computer Architecture 2",
+.date = @date("2025-09-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu34021-computer-architecture-2/",
+}
+---
+
+Computer Architecture 2 primarily focuses on _designing good software_.
+
+By _good software_, 3 elements are expected:
+- It does what it is supposed to do (Function)
+- It is easy to adapt or modify (Maintenance)
+- It works well for a given system (Performance)
