@@ -1,0 +1,12 @@
+---
+.title = "Computer Networks",
+.date = @date("2025-09-15T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu33031-computer-networks/",
+}
+---
+
+This module focuses on distributed communication networks and how the networking stack works.
