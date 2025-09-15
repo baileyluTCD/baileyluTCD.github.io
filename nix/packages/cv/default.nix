@@ -5,15 +5,17 @@
   ...
 }:
 let
-  tex =
-    pkgs.texliveSmall.withPackages (
-      ps: with ps; [
-        latex-bin
-    ]);
+  tex = pkgs.texliveSmall.withPackages (
+    ps: with ps; [
+      latex-bin
+    ]
+  );
 
-    python = (pkgs.python3.withPackages (python-pkgs: [
+  python = (
+    pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.beautifulsoup4
-    ]));
+    ])
+  );
 in
 
 pkgs.stdenvNoCC.mkDerivation {
