@@ -1,0 +1,12 @@
+---
+.title = "Functional Programming ",
+.date = @date("2025-09-18T00:00:00"),
+.author = "Luke Bailey",
+.layout = "note.shtml",
+.draft = false,
+.custom = {
+    "link": "https://baileylutcd.github.io/csu34016-functional-programming/",
+}
+---
+
+This module introduces students to functional programming by means of Haskell.
