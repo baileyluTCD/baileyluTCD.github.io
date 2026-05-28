@@ -130,8 +130,8 @@ linkFarm "zig-packages" [
   {
     name = "tree_sitter-0.26.7-z0LhyKZw5DNYN1vvSVemWE5oXx6ViFRx1eD4_z6SN35-";
     path = fetchzip {
-      url = "https://release-assets.githubusercontent.com/github-production-release-asset/696506839/22e694b1-ec7c-452f-a7f3-d10008edb7d2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-05-28T17%3A19%3A11Z&rscd=attachment%3B+filename%3Dsource.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-05-28T16%3A18%3A55Z&ske=2026-05-28T17%3A19%3A11Z&sks=b&skv=2018-11-09&sig=g%2F%2FKPxDvnnq%2BysmBZ0HiJtlgc1xmJwrLFOwizg1g70U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3OTk4ODI5NywibmJmIjoxNzc5OTg2NDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dqcTLk-akrussVdxlRXkcZ_Wl9TdQ4G29xvC7zWWBCs&response-content-disposition=attachment%3B%20filename%3Dsource.tar.gz&response-content-type=application%2Foctet-stream";
-      hash = "sha256-JM9ogPgVxm82rDEjgo/Q+8VrhVTLCorn7cxqai4VP0k=";
+      url = "https://github.com/neurocyte/tree-sitter/releases/download/master-9edae3a2a86cc63e97c6bb78d5ffef4510a10606/source.tar.gz";
+      hash = "sha256-oJQg+SL10BA4Kr+jOQKSuSY/l1LD7kt1fqpojJpNpvM=";
     };
   }
   {
