@@ -1,6 +1,6 @@
 {
   pkgs,
-  inputs,
+  system,
   flake,
   ...
 }:
@@ -8,8 +8,8 @@ pkgs.stdenvNoCC.mkDerivation {
   name = "personal-website";
   src = flake;
 
-  nativeBuildInputs = with pkgs; [
-    inputs.zine.packages.${system}.default
+  nativeBuildInputs = [
+    flake.packages.${system}.zine
   ];
 
   buildPhase = ''

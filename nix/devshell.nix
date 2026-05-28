@@ -1,6 +1,11 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  system,
+  flake,
+  ...
+}:
 pkgs.mkShellNoCC {
-  packages = with pkgs; [
-    inputs.zine.packages.${system}.default
+  packages = [
+    flake.packages.${system}.zine
   ];
 }
