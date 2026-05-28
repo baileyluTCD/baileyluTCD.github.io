@@ -1,0 +1,198 @@
+---
+.title = "One Service Definition to Rule Them All",
+.date = @date("2026-01-12T00:00:00"),
+.author = "baileylu",
+.layout = "post.shtml",
+.draft = false,
+---
+
+> Note: this blog was taken from the now defunct weyl.ai website and archived here, below is what was preserved from the original post
+
+**TL;DR:** Modular services give Nix a portable way to describe long-running processes once and reuse them everywhere. `Nimi` is a tiny Rust process manager that runs those definitions outside NixOS. Both are early and evolving, but the promise is one service definition that you can bring anywhere.
+
+---
+
+Currently, when looking to configure a long-running process with [Nix](https://nixos.org/), you have an almost endless amount of options to choose from.
+
+Each of them require rewriting the same service definition over and over again if you want to run it in multiple places. Some of this list you may have seen includes:
+
+- [`NixOS` `systemd` services](https://github.com/NixOS/nixpkgs).
+- [`home-manager` `systemd` user services](https://github.com/nix-community/home-manager).
+- [`services-flake`](https://github.com/juspay/services-flake).
+- [Manual wrappers around process managers](https://github.com/baileylu121/elixir-blueprint/blob/e8523588ae11a68c9b3c6027b3d1bb131a644200/nix/packages/mprocs.nix).
+
+Each of these options presents a different API, different tradeoffs and different ways to express something which is fundamentally the same thing:
+
+**A long running process with configuration somewhere in the Nix store**.
+
+Luckily, as of Nix `v25.11`, we now have a brand new generic specification which is shaping up to finally supersede the 15 different service configurations you probably have for your projects - [`Modular Services`](https://nixos.org/manual/nixos/unstable/#modular-services). (Thanks to **[@roberth](https://github.com/roberth)**).
+
+---
+
+# Modular Services: Introduction and history
+
+Modular services, in their current version, represent the culmination of a couple of years of bikeshedding in PR comments. Starting with [this RFC](https://github.com/NixOS/rfcs/pull/163), where discussion began on an implementation of a "Portable Service Layer", which proposed using a generator function primitive `createManagedProcess` to produce some kind of config file which could be translated into configuration for other process managers.
+
+After a period of discussion and the original maintainer seemingly giving up, this idea eventually evolved into [this PR](https://github.com/NixOS/nixpkgs/pull/372170), finally introducing an abstraction for writing portable Nix services. The key trick uses the module types [`types.attrsOf`](https://noogle.dev/f/lib/types/attrsOf) and [`types.submodule <services submodule def>`](https://noogle.dev/f/lib/types/submodule) to make the service definitions extensible.
+In practice, this means a service definition can be evaluated inside any module system without rewriting it.
+
+> `types` refers to [`lib.types`](https://noogle.dev/q?term=lib.types), from `nixpkgs`'s `lib`
+
+The accepted implementation involves defining services on top of a nix module which is usable in any modules system, and mandating that the services be defined in terms of the options defined by said module.
+
+In a code sense, this `submodule` type looks like:
+
+```nix
+servicesSubmodule = types.submodule {
+  options.process.argv = lib.mkOption {
+    description = ''
+      Arguments to the process to run here
+    '';
+    type = types.listOf types.str;
+  };
+  options.configData = lib.mkOption {
+    # hidden for compactness, check out the actual specification or the rendering in the Nimi docs linked below
+  };
+};
+```
+
+This is made portable by only evaluating it with the minimal set of arguments passed into any module system by [`lib.evalModules`](https://noogle.dev/f/lib/evalModules), of which are:
+
+- `lib`: The nixpkgs library.
+- `config`: The results of all options after merging the values from all modules together.
+- `options`: The options declared in all modules.
+- `specialArgs`: The `specialArgs` argument passed to `evalModules`.
+
+Since these are common to **every module system**, these can then be nested inside **any of those module systems**, where the translation to the lower level definitions occurs. This includes targets like `home-manager`, `NixOS` or any other custom module system you can think of.
+
+A downstream modules system definition may look like:
+
+```nix
+options.myServices = lib.mkOption {
+  description = ''
+    Collection of modular services to run with an implementation in
+    a custom modules system somewhere
+  '';
+  type = types.lazyAttrsOf servicesSubmodule;
+};
+```
+
+Seeing as it is a `submodule`, it can now access its own `imports` attribute, even when nested inside another external module system, which can now use any of the options such as `process.argv` to define a service in an entirely generic way:
+
+```nix
+config.myServices = {
+  # This scope gets evaluated as it's own module, hence `imports` can provide modular services options
+  "super-awesome-service" = {
+    imports = [
+      ./modular-service-definition.nix
+    ];
+
+    # Customize some features for the service
+    #
+    # If you're used to more standard modules definitions
+    # you should note the lack of an `enable` flag`, as
+    # the processes are already semantically `enabled`
+    # through the process of the import
+    super-awesome-service = {
+      fooFeatureEnabled = true;
+      bar = [
+        "quux"
+      ];
+    };
+  };
+  # This service skips the `imports` and just configures the process directly
+  "raw-service" = {
+    process.argv = [
+      (lib.getExe pkgs.myPackage)
+      "--run"
+      "--verbose-logs"
+    ];
+  };
+};
+```
+
+The convention for these new modular services is to define them under a given `pkg`'s `passthru.services.<foo>` attribute, which allows exposing a `default` service or additionally multiple types of services which all use the same package. For an example of this, see the `ghostunnel` package on [`nixpkgs`](https://github.com/NixOS/nixpkgs/blob/06e3d0e1267c00bb67566ef0907f19731b506a9e/pkgs/by-name/gh/ghostunnel/package.nix#L36), which was among the first to get one of these new modular services definitions.
+
+---
+
+# Where `Nimi` enters the picture
+
+Having a generic way to define processes is all well and good, but if you can't **actually run** them in more than one place it's a bit of a moot point and an exercise in creating more work for yourself. Currently, the only available implementation of these is [just `NixOS` bindings to `systemd` again](https://github.com/NixOS/nixpkgs/blob/d576a93806ca33913cac0ea9bcc97c90b556f7ee/nixos/modules/system/service/systemd/system.nix#L78), which is where `Nimi`'s intended usage lies.
+
+`Nimi` is a **standalone minimal process manager executable** which is written in Rust and designed from the ground up to parse and run these modular services bindings directly, using its own custom module system to host both services configuration and configuration of the actual `Nimi` application itself. Unlike ad-hoc wrappers or one-off `systemd` glue, it consumes the modular services spec directly so you do not maintain parallel adapters.
+
+Because the modular services specification is still experimental, `Nimi` should also be considered experimental.
+
+`Nimi` configurations are defined as a simple configuration wrapper around the binary itself for ultimate portability, meaning you can run a whole host of different things from the same `Nimi` configuration and also benefit from a lot of future efforts from `nixpkgs` maintainers to introduce new modular services definitions instead of manually creating adapters to different things you might configure with Nix (i.e. if you've ever wanted to run a service that only exists in `NixOS` at the `home-manager` level).
+
+Some things you may want to use `Nimi` for are:
+- Generating minimal OCI containers (`Nimi` also doubles as a [tini](https://github.com/krallin/tini)-like init system with grandchild reaping)
+- A `nix run`-able binary you can have exposed from your flake that runs your processes in userspace directly
+- A `shellHook` for your devshell which runs your database and documentation servers in the background automatically
+
+# A quick look at configuring a `Nimi` instance
+
+You can create a simple configured `Nimi` instance like so:
+
+```nix
+nimi.mkNimiBin { # This is a custom module with the class `nimi` and a similar `services` option to the above
+  services."my-service" = {
+    imports = [ pkgs.some-application.services.default ];
+    someApplication = {
+      listen = "0.0.0.0:8080";
+      dataDir = "/var/lib/my-service";
+    };
+  };
+
+  settings.restart.mode = "up-to-count"; # Restart the services up to a configurable amount of times
+  settings.restart.time = 2000;
+}
+```
+
+That produces a portable wrapper binary that runs the configured services with Nimi's restart policy.
+
+> You can also configure things like the binary name of the wrapper, textual log files, customize the containers generated and add startup scripts - take a look at the [`Nimi` docs](https://weyl-ai.github.io/nimi) for more in depth information
+
+---
+
+# Translating `Nimi` to other instances
+
+`Nimi` also provides bindings for adapting modular service configurations to [`flake-parts`](https://flake.parts/), `NixOS` or `home-manager`. It achieves this with a very similar trick to the `submodule` used above, where evaluation of `Nimi` configuration is delegated to `nimi.mkNimiBin` instead of the host module system.
+
+In all of these cases, you can configure multiple `Nimi` instances as follows:
+
+```nix
+nimi = {
+  "services-group-a" = {
+    services."my-database" = {
+      imports = [ pkgs.example-database.services.default ];
+      databaseCfg = {
+        dataDir = "data";
+      };
+    };
+
+    settings.restart.mode = "always";
+  };
+  "services-group-b" = {
+    services."my-frontend" = {
+      imports = [ pkgs.example-frontend.services.default ];
+    };
+
+    settings.restart.mode = "never";
+  };
+};
+```
+
+What you actually get out of this depends on the host module system, have a look at the `Nimi` docs for more information.
+
+---
+
+# Conclusion
+
+If you're tired of maintaining parallel service definitions across `NixOS`, `home-manager`, and your dev environments, give `Nimi` a spin. Start with something simple - maybe that Postgres instance you spin up for local development, and see how it feels to have one definition that works everywhere. 
+
+We'd love to hear what you build with it. Since the modular services spec is still experimental, expect `Nimi` to evolve alongside it. If you're ready to try it, the quickest path is the [Nimi docs](https://weyl-ai.github.io/nimi/).
+
+---
+
+*— Weyl Team*
