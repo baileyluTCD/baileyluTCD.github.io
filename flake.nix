@@ -16,16 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zig2nix = {
-      url = "github:Cloudef/zig2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    zine = {
-      url = "github:nihklas/zine?ref=main";
-      inputs.zig2nix.follows = "zig2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   nixConfig = {
