@@ -20,6 +20,7 @@ linkFarm "zig-packages" [
     path = fetchzip {
       url = "https://codeload.github.com/google/wuffs-mirror-release-c/tar.gz/90e4d81a6a8b7b601e8e568da32a105d7f7705e5";
       hash = "sha256-IGZq1T10h6Y61999sW60sOw0YXQn5JAHRLywPawE6H0=";
+      extension = "tar.gz";
     };
   }
   {
